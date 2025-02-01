@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HX Web Bot</title>
+    <title>Moveworks Web Bot</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #bot-container {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
-    <iframe src="https://www.google.com/search?igu=1" width="100%" height="600px" frameborder="0"></iframe>
+    <div id="bot-container">
+        <iframe 
+            src="https://abbvie-sandbox-chat.moveworks.com" 
+            width="100%" 
+            height="100%" 
+            frameborder="0"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+            allow="microphone; camera"
+        ></iframe>
+    </div>
+
+    <script>
+        // You may need to add additional JavaScript here to handle any
+        // postMessage communication with the iframe, if required by Moveworks
+    </script>
 </body>
 </html>
